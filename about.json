@@ -1,0 +1,23 @@
+{
+  "about_url": null,
+  "license_url": null,
+  "assets": {
+    "banner_image": "/assets/banner_image.png"
+  },
+  "name": "Scarlet Society theme",
+  "color_schemes": {
+    "Scarlet Society Light": {
+      "primary": "2b2627",
+      "secondary": "E5E5E5",
+      "tertiary": "f5333f",
+      "quaternary": "b2292e",
+      "header_background": "2b2627",
+      "header_primary": "ffffff",
+      "highlight": "7f392c",
+      "danger": "e45735",
+      "success": "009900",
+      "love": "fa6c8d"
+    }
+  },
+  "components": ["https://github.com/Ahmedgagan/discourse-elementary-layout", "https://github.com/Ahmedgagan/discourse-search-banner", "https://github.com/discourse/Discourse-easy-footer", "https://github.com/discourse/discourse-topic-excerpts", "https://github.com/tshenry/discourse-versatile-banner"]
+}
