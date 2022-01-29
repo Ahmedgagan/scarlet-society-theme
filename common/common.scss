@@ -66,6 +66,27 @@ body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', sans-serif;
 }
 
+.search-menu .search-input, .list-controls .combo-box .combo-box-header, .search-menu .search-input input#search-term {
+  border-color: var(--primary-low);
+  background-color: #fff;
+}
+
+#create-topic, .banner-box .row .single-box .btn.btn-icon-text {
+  background-color: var(--primary);
+  color: var(--secondary);
+  .d-icon {
+    color: var(--secondary);
+  }
+
+  &:hover {
+    background-color: var(--primary-very-high);
+    color: var(--secondary-very-high);
+    .d-icon {
+      color: var(--secondary-very-high);
+    }
+  }
+}
+
 #main .banner-box {
   .container {
     max-width: calc(100% - 16px);
@@ -84,10 +105,6 @@ body, h1, h2, h3, h4, h5, h6 {
     .btn {
       font-size: var(--font-down-4);
     }
-  }
-
-  .row .single-box .btn.btn-icon-text {
-    color: var(--secondary);
   }
 
   .row .second_column {
@@ -164,7 +181,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
   .topic-list-body {
     display: contents;
-    .topic-list-item {
+    tr.topic-list-item {
 
       td.main-link {
         padding: 1em;
@@ -175,7 +192,7 @@ body, h1, h2, h3, h4, h5, h6 {
       }
       display: flex;
       margin-bottom: 0.5em;
-      border: 1px solid var(--primary-low-mid);
+      border: 1px solid var(--primary-low);
       border-radius: 0.25em;
 
       &:not(.visited) {
@@ -198,12 +215,10 @@ body, h1, h2, h3, h4, h5, h6 {
       }
 
       &.visited {
-        border-left: 1px solid var(--primary-low-mid);
         .discourse-tag {
           opacity: 0.75;
         }
         &:hover {
-          border-left: 1px solid var(--primary-low-mid);
           .discourse-tag {
             opacity: 1;
           }
@@ -246,11 +261,14 @@ input[type="color"],
 div.ac-wrap,
 .navigation-container .navigations .search-input,
 .select-kit.single-select.dropdown-select-box .select-kit-header,
-.btn {
+.btn,
+.list-controls .nav-pills .navigation-toggle,
+.mobile-nav>li>a.expander {
   border-radius: 4px;
 }
 
-// .btn {
-//   background: var(--primary);
-//   color: var(--secondary)
-// }
+.navigation-container {
+  --nav-space: 0.5em;
+  border-bottom: 1px solid var(--primary-low);
+  margin-bottom: 1em;
+}
