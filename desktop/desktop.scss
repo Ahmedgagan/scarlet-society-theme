@@ -1,12 +1,9 @@
-.most-liked-section {
+.top-section.most-liked-section {
+  display: grid;
+  grid-template-columns: 1fr;
   .top-sub-section {
-    width: 33.33%;
-  }
-
-  :not(.summary-category-list) {
-    .top-sub-section {
-      width: 50%;
-    }
+    width: unset;
+    flex: 1 0;
   }
 }
 
