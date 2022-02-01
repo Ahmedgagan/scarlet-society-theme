@@ -2,6 +2,12 @@
   .top-sub-section {
     width: 33.33%;
   }
+
+  :not(.summary-category-list) {
+    .top-sub-section {
+      width: 50%;
+    }
+  }
 }
 
 .top-sub-section:last-child {
