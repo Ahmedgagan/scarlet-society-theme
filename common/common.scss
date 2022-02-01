@@ -62,7 +62,7 @@ $secondary-very-high: mix(
   --secondary-high: #{$secondary-high};
   --secondary-very-high: #{$secondary-very-high};
 }
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, .form-vertical .control-label {
   font-family: 'Merriweather', sans-serif;
 }
 
@@ -71,7 +71,7 @@ body, h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
 }
 
-#create-topic, .banner-box .row .single-box .btn.btn-icon-text {
+.btn-primary, #create-topic, .banner-box .row .single-box .btn.btn-icon-text {
   background-color: var(--primary);
   color: var(--secondary);
   .d-icon {
@@ -84,6 +84,14 @@ body, h1, h2, h3, h4, h5, h6 {
     .d-icon {
       color: var(--secondary-very-high);
     }
+  }
+}
+
+.discourse-no-touch .btn-primary:hover {
+  background-color: var(--primary-very-high);
+  color: var(--secondary-very-high);
+  .d-icon {
+    color: var(--secondary-very-high);
   }
 }
 
@@ -263,12 +271,273 @@ div.ac-wrap,
 .select-kit.single-select.dropdown-select-box .select-kit-header,
 .btn,
 .list-controls .nav-pills .navigation-toggle,
-.mobile-nav>li>a.expander {
+.mobile-nav>li>a.expander,
+.top-sub-section u,
+.badge-card,
+.badge-card svg.d-icon,
+.badge-card,
+.top-section.stats-section ul,
+.top-sub-section ul,
+.heatmap-high,
+.post-date,
+.topic-map section.map.map-collapsed,
+.topic-map,
+.category-boxes .category-box,
+.search-menu .results .search-result-topic .list .item,
+.search-menu .results .search-result-topic .list .item a,
+.fps-result,
+.user-stream .item, .user-stream .user-stream-item {
   border-radius: 4px;
+}
+
+.directory .directory-table-container .directory-table, .admin-contents table {
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+
+  td, th {
+    border: none;
+  }
+
+  tr {
+    margin: 1em;
+    background-color: #fff;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    td {
+      border-top: 1px solid var(--primary-low);
+      border-bottom: 1px solid var(--primary-low);
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      padding-left: 0.5em;
+    }
+
+    td:first-child {
+      border-left: 1px solid var(--primary-low);
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    td:last-child {
+      border-right: 1px solid var(--primary-low);
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+}
+
+.category-boxes .category-box-inner, .category-boxes-with-topics .category-box-inner {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.search-menu .results .search-result-topic .list .item {
+  border: 1px solid var(--primary-low);
+  margin-bottom: 0.5em;
+
+  a:hover {
+    background-color: #fff;
+  }
+}
+
+.user-content .topic-list .topic-list-body tr.topic-list-item {
+  border-left: 4px solid var(--quaternary);
+  background-color: #fff;
+}
+
+.user-content .user-notifications-filter {
+  border: none;
+}
+
+.user-stream .notification.unread {
+  background-color: #fff;
+}
+
+.user-stream .notification:not(.unread) {
+  background-color: transparent;
+  border-left: 1px solid var(--primary-low);
+}
+
+.search-container .search-advanced .search-info {
+  margin-bottom: 0;
+}
+
+.fps-result, .user-stream .item, .user-stream .user-stream-item {
+  border: 1px solid var(--primary-low);
+  margin-bottom: 0.5em;
+  padding: 1em;
+  background-color: #fff;
+  border-left: 4px solid var(--quaternary);
+}
+
+.user-content {
+  padding: 0 1em;
 }
 
 .navigation-container {
   --nav-space: 0.5em;
-  border-bottom: 1px solid var(--primary-low);
   margin-bottom: 1em;
+}
+
+.nav.nav-pills {
+  border-bottom: 1px solid var(--primary-low);
+}
+
+.replies-section li, .topics-section li, .links-section li {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-sub-section .topic-info {
+  order: 3;
+}
+
+.top-sub-section br {
+  display: none;
+}
+
+.top-sub-section ul {
+  background-color: #fff;
+  border: 1px solid var(--primary-low);
+
+  li {
+    border-left: none;
+    padding: 1em 0;
+    margin: 0.5em 1.5em;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--primary-low);
+    }
+  }
+}
+
+.stats-section li .user-stat {
+  display: grid;
+
+  .label {
+    text-transform: capitalize;
+  }
+}
+
+.top-section.stats-section ul {
+  background-color: #fff;
+  border: 1px solid var(--primary-low);
+  padding: 1em 0 0.5em 1.5em;
+
+  li {
+    width: 17.5%;
+  }
+
+  li.linked-stat {
+    padding-right: 14px;
+  }
+
+  li:first-child,
+  li:not(:nth-child(4n+1)) {
+    .user-stat {
+      padding-right: 1em;
+      border-right: 1px solid var(--primary-low);
+    }
+  }
+}
+
+.badge-card {
+  background-color: #fff;
+  border: 1px solid var(--primary-low);
+
+  .badge-contents svg.d-icon {
+    background-color: var(--secondary);
+    padding: 0.125em;
+    border: 2px solid var(--primary-low);
+  }
+}
+
+.user-secondary-navigation .nav-stacked {
+  border-right: 1px solid var(--primary-low);
+}
+
+.user-secondary-navigation .nav-stacked a.active {
+  border-left: 2px solid var(--quaternary);
+}
+
+.btn.btn-icon.pad-left::after {
+  content: "Edit";
+  margin-left: 0.5em;
+}
+
+.pref-email .email-second .primary {
+  color: var(--quaternary);
+}
+
+.form-vertical .control-label,
+.form-vertical .controls {
+  margin-bottom: 0.75em;
+}
+
+.pref-email .email-first {
+  margin-bottom: 0.25em;
+}
+
+.heatmap-high, .post-date {
+  color: var(--primary);
+  background-color: var(--primary-low);
+  padding: 0.5em 0.65em;
+  font-size: var(--font-0);
+  line-height: normal;
+}
+
+.heatmap-high, .heatmap-high a, .heatmap-high .d-icon, .heatmap-high .d-button-label, .topic-meta-data .post-info a {
+  color: var(--primary) !important;
+}
+
+.topic-map section {
+  background-color: #fff;
+}
+
+.topic-map section.map {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.topic-map section.topic-map-expanded {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  section:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.topic-map .map {
+  border-top: none;
+}
+
+.topic-map {
+  border-top: 1px solid var(--primary-low);
+}
+
+.map:first-of-type .buttons .btn {
+  height: 50%;
+  width: 50%;
+}
+
+.map:first-of-type .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.badge-wrapper.bullet .badge-category-parent-bg, .badge-wrapper.bullet .badge-category-bg {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  align-self: center;
+}
+
+.summary-category-list li .category-stats span:first-of-type {
+  border-right: 1px solid var(--primary-low);
+  margin-right: 0.5em;
+  padding-right: 0.5em;
 }

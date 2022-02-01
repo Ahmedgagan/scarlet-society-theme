@@ -1,0 +1,20 @@
+.most-liked-section {
+  .top-sub-section {
+    width: 33.33%;
+  }
+}
+
+.top-sub-section:last-child {
+  ul {
+    max-width: 100%;
+  }
+}
+
+.top-section.most-liked-section {
+  display: inline-flex;
+  width: 100%;
+}
+
+.links-section a.domain {
+  order: 2;
+}
