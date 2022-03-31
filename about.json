@@ -25,6 +25,8 @@
     "https://github.com/discourse/Discourse-easy-footer",
     "https://github.com/discourse/discourse-topic-excerpts",
     "https://github.com/tshenry/discourse-versatile-banner",
-    "https://github.com/Ahmedgagan/discourse-custom-category-boxes-component"
+    "https://github.com/Ahmedgagan/discourse-custom-category-boxes-component",
+    "https://github.com/discourse/discourse-custom-header-links",
+    "https://github.com/discourse/Discourse-nav-links-component"
   ]
 }
